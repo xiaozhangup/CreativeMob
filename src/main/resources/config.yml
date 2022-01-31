@@ -19,7 +19,7 @@ MobTable:
 
       Settings:
         Keepname: true
-        Name: ""
+        Name: "TEST"
         Health: 200
         Chance: 50
         World:
