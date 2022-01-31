@@ -1,0 +1,28 @@
+Random:
+  Mixmode: true
+
+
+MobTable:
+  Loop: 1
+  List:
+    1:
+      Type: SHEEP
+      Drop:
+        - test
+      Head: head
+      Chest: chest
+      Leg: leg
+      Foot: foot
+
+      Hand: hand
+      Offhand: offhand
+
+      Settings:
+        Keepname: true
+        Name: ""
+        Health: 200
+        Chance: 50
+        World:
+          - world
+
+ItemTable:

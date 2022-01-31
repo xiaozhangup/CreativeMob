@@ -1,0 +1,5 @@
+name: CreativeMob
+version: 1.0
+main: me.xiaozhangup.creativemob.Main
+author: xiaozhangup
+api-version: 1.13
