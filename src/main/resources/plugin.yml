@@ -3,3 +3,6 @@ version: 1.0
 main: me.xiaozhangup.creativemob.Main
 author: xiaozhangup
 api-version: 1.13
+commands:
+  creativemob:
+    aliases: [cmt]

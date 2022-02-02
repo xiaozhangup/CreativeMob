@@ -1,7 +1,11 @@
 package me.xiaozhangup.creativemob;
 
+import me.happylandmc.core.message.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,9 +22,10 @@ public class Main extends JavaPlugin {
         reloadConfig();
         getLogger().info("CreativeMob 开始加载数据");
         getLogger().info("By xiaozhangup");
+        Bukkit.getPluginManager().registerEvents(new Guiedit() , this);
         Config.load();
 
-        Bukkit.getPluginCommand("cmt").setExecutor((commandSender, command, s, inside) -> {
+        Bukkit.getPluginCommand("creativemob").setExecutor((commandSender, command, s, inside) -> {
             Player p = (Player) commandSender;
 
             if (commandSender.hasPermission("creativemob.use")) {
@@ -47,6 +52,7 @@ public class Main extends JavaPlugin {
                     reloadConfig();
                     commandSender.sendMessage("§c重载完成");
                 } else if (inside[0].equals("edit")) {
+                    Inventory inv = Bukkit.createInventory(null , 8 , Message.Color("主手/副手/头盔/护甲/裤子/靴子-" + inside[1] ));
 
                 } else {
                     commandSender.sendMessage("§c没有这个命令或格式错误");
